@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+
+    --primary: #131417;
+    --secondary: #425163;
+    --dark: #252830;
+    --light: #464953;
+    --white: #ffffff;
+    --black: #000000;
+    --gold: #bd8100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+}
+
+/* <-------------------navbar start-----------------> */
+
+.navbar {
+    width: 100%;
+    height: 10%;
+    margin: 0px;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid var(--light);
+}
+
+.logo {
+    color: var(--white);
+    font-size: 20px;
+    /* padding-top: 10px; */
+}
+
+.navbar ul {
+    margin: 0px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+.navbar ul li a {
+    padding: 8px 20px;
+    text-decoration: none;
+    color: var(--light);
+    transition: 0.3s ease-in-out;
+    outline: none;
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover {
+    color: var(--white);
+    /* text-decoration: none; */
+}
+
+.icon {
+    margin-left: 30px;
+    font-size: 24px;
+    color: var(--light);
+    transition: 0.3s ease-in-out;
+}
+
+.icon:hover {
+    color: var(--white);
+}
+
+/* <-------------------navbar end-----------------> */
+
+/* <-------------------content start-----------------> */
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    min-height: calc(100vh - 74px);
+}
+
+.text {
+    text-align: left;
+    margin-right: 50px;
+}
+
+.text h1 {
+    color: var(--gold);
+    font-size: 70px;
+    margin: 0;
+    font-weight: 100;
+    font-family: 'Playfair Display';
+}
+
+.text span {
+    display: block;
+    letter-spacing: 26px;
+    font-size: 62px;
+    font-weight: 900;
+    text-transform: uppercase;
+    /* border: 1px solid var(--light); */
+}
+
+.text p {
+    font-size: 20px;
+    color: var(--light);
+    padding: 20px 0 30px;
+}
+
+.pic {
+    width: 500px;
+    height: 500px;
+    border: 1px solid var(--gold);
+    border-radius: 15px;
+    box-shadow: 0px 13px 20px #00000047;
+    overflow: hidden;
+    background-color: var(--secondary);
+    margin-left: 50px;
+}
+
+.pic img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.content .text button {
+    padding: 10px 25px;
+    font-size: 18px;
+    border-radius: 50px;
+    border: 2px solid var(--gold);
+    background-color: transparent;
+    color: var(--white);
+    font-family: poppins;
+    font-weight: 500;
+    letter-spacing: 1px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.content .text button.active,
+.content .text button:hover {
+    background-color: var(--gold);
+    color: var(--dark)
+}
+
+.content .text button.work {
+    margin-left: 25px !important;
+}
+
+/* <-------------------content end-----------------> */
+
+/* <-------------------images start-----------------> */
+
+.images {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.container {
+    height: 380px;
+}
+
+.images .imghed {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 30px 20px 0;
+}
+
+.imghed h1 {
+    color: var(--gold);
+    font-size: 26px;
+    border-right: 2px solid var(--gold);
+    padding-right: 10px;
+}
+
+.imghed span {
+    align-items: flex-end;
+    margin-top: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    color: var(--light);
+    cursor: pointer;
+}
+
+.imghed span:hover {
+    color: var(--white);
+}
+
+.images .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.images .row .col-md-4 {
+    width: 350px;
+    height: 200px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.cardimg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* border: 5px solid transparent; */
+    box-shadow: 0px 13px 20px #00000047;
+    border-radius: 0px;
+    background-color: var(--secondary);
+    position: relative;
+    background: linear-gradient(135deg, #372d18, #0e0806);
+
+}
+
+.cardimg::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0x;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: linear-gradient(135deg, #bd8100, #0e0806);
+    z-index: -1;
+}
+
+.cardimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.cardimg h5 {
+    height: 38px;
+    width: 100%;
+    font-size: 15px;
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    z-index: 1;
+    color: var(--white);
+    background: linear-gradient(280deg, #000000b8, #ffffff80);
+    margin: 0;
+    padding: 10px;
+}
+
+/* <-------------------images end-----------------> */
+
+/* <-------------------banner start-----------------> */
+.banner {
+    width: 100%;
+    height: 100%;
+}
+
+.banner1 {
+    width: 1100px;
+    height: 440px;
+    margin: 0 auto;
+}
+
+.bannertext {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bannertext h1 {
+    color: var(--gold);
+    font-size: 26px;
+    border-right: 2px solid var(--gold);
+    padding-right: 10px;
+}
+
+.bannertext span {
+    align-items: flex-end;
+    margin-top: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    color: var(--light);
+    cursor: pointer;
+}
+
+.bannertext span:hover {
+    color: var(--white);
+}
+
+.boxin {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--black);
+    overflow: hidden;
+
+}
+
+.boxinimg {
+    width: auto;
+    height: auto;
+}
+
+.boxinimg img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.boxinhed {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.boxinhed h1 {
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--gold);
+    font-family: 'sans-serif';
+    margin-top: 0;
+}
+
+.boxinhed p {
+    font-size: 22px;
+    font-weight: 200;
+    color: var(--white);
+    padding: 5px 0 10px;
+    letter-spacing: 8px;
+}
+
+.boxin button {
+    font-size: 18px;
+    padding: 10px 25px;
+    border: 2px solid var(--gold);
+    border-radius: 50px;
+    background-color: var(--gold);
+    letter-spacing: 1px;
+    color: var(--black);
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    outline: none;
+}
+
+.boxin button:hover {
+    color: var(--white);
+    background-color: transparent;
+}
+
+
+.banner2 {
+    width: 1100px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--black);
+    overflow: hidden;
+    margin: 0 auto;
+    background-image: url(./../img/multi1.png);
+    background-repeat: no-repeat;
+    background-size: 510px 249px;
+    background-position: center right;
+    position: relative;
+}
+
+.banner2::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0x;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: linear-gradient(91deg, #0C1321, #0C1321, #707a8854);
+    z-index: 0;
+}
+
+
+
+.banner2 .banner2hed {
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.banner2hed h1 {
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--gold);
+    font-family: 'sans-serif';
+    margin-top: 0;
+
+}
+
+.banner2hed p {
+    font-size: 22px;
+    font-weight: 200;
+    color: var(--white);
+    padding: 5px 0 10px;
+    letter-spacing: 8px;
+}
+
+.banner2hed button {
+    font-size: 18px;
+    padding: 10px 25px;
+    border: 2px solid var(--gold);
+    border-radius: 50px;
+    background-color: var(--gold);
+    letter-spacing: 1px;
+    color: var(--black);
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    outline: none;
+}
+
+.banner2hed button:hover {
+    color: var(--white);
+    background: transparent;
+}
+
+.banner2img {
+    height: 100%;
+    width: 50%;
+}
+
+.banner2img img {
+    width: 520px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.futterbox {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.futterbox .futtertext {
+    /* background-color: var(--black); */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.futterbox .futtertext h1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--gold);
+    font-family: 'sans-serif';
+}
+
+.futterbox .futtertext p {
+    line-height: 10px;
+    font-family: 'Poppins''sans-serif';
+    color: var(--light);
+}
+
+.futtericon img {
+    padding-left: 20px;
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+
+}
+
+/* <-------------------banner end-----------------> */
